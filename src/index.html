@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista artykułów</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="app">
+
+      <nav>
+        <a href="/login/" id="login-btn" class="bg-blue-500 text-white px-4 py-2 rounded hidden">
+          Zaloguj się
+        </a>
+        <button id="logout-btn" class="bg-red-500 text-white px-4 py-2 rounded hidden">
+          Wyloguj
+        </button>
+      </nav>
+
+      <main>
+        <h1 class="text-red-500 text-2xl font-bold">Lista artykułów</h1>
+        <section id="articles"></section>
+
+        <button id="add-article-btn" class="bg-green-600 text-white px-4 py-2 rounded mt-4">Dodaj artykuł</button>
+
+        <div id="modal" class="modal hidden">
+          <div class="modal-content bg-white p-6 rounded shadow">
+            <span id="close-modal" class="close cursor-pointer">&times;</span>
+            <h2 class="text-lg font-bold mb-4">Dodaj nowy artykuł:</h2>
+            <form id="add-article-form">
+              <label for="title">Tytuł:</label>
+              <input type="text" name="title" id="title" required><br/>
+              <label for="subtitle">Podtytuł:</label>
+              <input type="text" name="subtitle" id="subtitle"><br/>
+              <label for="author">Autor:</label>
+              <input type="text" name="author" id="author" required><br/>
+              <label for="content">Treść:</label><br/>
+              <textarea name="content" id="content" required></textarea><br/>
+              <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Zapisz artykuł</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="edit-modal" class="fixed inset-0 bg-white flex justify-center items-center hidden">
+          <form id="edit-form" class="bg-white p-6 rounded shadow max-w-lg w-full">
+            <h3 class="text-lg font-bold mb-4">Edytuj artykuł:</h3>
+            <input type="hidden" id="edit-article-id" />
+            <label for="edit-title" class="block mb-1">Tytuł:</label>
+            <input id="edit-title" type="text" required class="w-full mb-3 p-2 border rounded" />
+            <label for="edit-subtitle" class="block mb-1">Podtytuł:</label>
+            <input id="edit-subtitle" type="text" class="w-full mb-3 p-2 border rounded" />
+            <label for="edit-author" class="block mb-1">Autor:</label>
+            <input id="edit-author" type="text" required class="w-full mb-3 p-2 border rounded" />
+            <label for="edit-content" class="block mb-1">Treść:</label>
+            <textarea id="edit-content" rows="6" required class="w-full mb-3 p-2 border rounded"></textarea>
+            <div class="flex justify-end space-x-2">
+              <button type="button" id="edit-cancel" class="px-4 py-2 border rounded">Anuluj</button>
+              <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Zapisz zmiany</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
