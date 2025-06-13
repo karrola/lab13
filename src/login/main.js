@@ -21,6 +21,6 @@ form.addEventListener('submit', async (e) => {
     errorEl.classList.remove('hidden');
   } else {
     // np. przekierowanie po zalogowaniu
-    window.location.href = '/';
+    window.location.href = './';
   }
 });
