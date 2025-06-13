@@ -9,6 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const inputs = await fg('src/**/*.html', { absolute: true })
 
 export default defineConfig({
+  base: '/lab13/',
   plugins: [
     tailwindcss(),
   ],
