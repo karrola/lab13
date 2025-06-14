@@ -3,23 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Logowanie</title>
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <div id="app">
-      <a href="/lab13/index.html">Home</a>
-      <main>
-        <form id="login-form" class="max-w-md mx-auto mt-10 p-4 border rounded shadow">
-  <h2 class="text-xl font-bold mb-4">Zaloguj się</h2>
+    <div id="app" class="bg-purple-100">
+      <header>
+      <nav class="fixed top-0 w-full z-50 bg-white/20 backdrop-blur-xl shadow px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
+        <h1 class="text-purple-800 text-2xl font-bold ml-2">
+          Nazwa bloga
+        </h1>
+      <a href="/lab13/index.html" class="border border-pink-400 text-pink-400 px-4 py-2 rounded bg-transparent hover:bg-pink-100 transition">Home</a>
+      </nav>
+      </header>
+      <main class="px-4 flex items-center justify-center min-h-screen">
+        <form id="login-form" class="bg-white p-6 rounded shadow max-w-lg w-full">
+  <h3 class="text-lg font-bold mb-4">Zaloguj się:</h3>
 
-  <label for="email" class="block mb-1">Email</label>
-  <input type="email" id="email" name="email" required class="w-full p-2 border rounded mb-4" />
+  <label for="email" class="block mb-1">Email:</label>
+  <input type="email" id="email" name="email" required class="w-full mb-3 p-2 border rounded" />
 
-  <label for="password" class="block mb-1">Hasło</label>
-  <input type="password" id="password" name="password" required class="w-full p-2 border rounded mb-4" />
+  <label for="password" class="block mb-1">Hasło:</label>
+  <input type="password" id="password" name="password" required class="w-full mb-3 p-2 border rounded" />
 
-  <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Zaloguj się</button>
+  <button type="submit" class="bg-blue-300 text-blue-900 text-sm px-3 py-2 rounded hover:bg-blue-400 transition">Zaloguj się</button>
 
   <p id="login-error" class="text-red-600 mt-2 hidden"></p>
 </form>
