@@ -9,29 +9,25 @@
   <body>
     <div id="app" class="min-h-screen bg-purple-100">
       <header>
-      <nav class="fixed top-0 w-full z-50 bg-white/20 backdrop-blur-xl shadow px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
-        <h1 class="text-purple-800 text-2xl font-bold ml-2">
-          Nazwa bloga
-        </h1>
-      <a href="/lab13/index.html" class="border border-pink-400 text-pink-400 px-4 py-2 rounded bg-transparent hover:bg-pink-100 transition">Home</a>
-      </nav>
+        <nav class="fixed top-0 w-full z-50 bg-white/20 backdrop-blur-xl shadow px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
+          <h1 class="text-purple-800 text-2xl font-bold ml-2">Nazwa bloga</h1>
+          <a href="/lab13/index.html" class="border border-pink-400 text-pink-400 px-4 py-2 rounded bg-transparent hover:bg-pink-100 transition">Home</a>
+        </nav>
       </header>
+      
       <main class="px-4 flex items-center justify-center min-h-screen">
         <form id="login-form" class="bg-white p-6 rounded shadow max-w-lg w-full">
-  <h3 class="text-lg font-bold mb-4">Zaloguj się:</h3>
-
-  <label for="email" class="block mb-1">Email:</label>
-  <input type="email" id="email" name="email" required class="w-full mb-3 p-2 border rounded" />
-
-  <label for="password" class="block mb-1">Hasło:</label>
-  <input type="password" id="password" name="password" required class="w-full mb-3 p-2 border rounded" />
-
-  <button type="submit" class="bg-blue-300 text-blue-900 text-sm px-3 py-2 rounded hover:bg-blue-400 transition">Zaloguj się</button>
-
-  <p id="login-error" class="text-red-600 mt-2 hidden"></p>
-</form>
+          <h2 class="text-lg font-bold mb-4">Zaloguj się:</h2>
+          <label for="email" class="block mb-1">Email:</label>
+          <input type="email" id="email" name="email" required class="w-full mb-3 p-2 border rounded" />
+          <label for="password" class="block mb-1">Hasło:</label>
+          <input type="password" id="password" name="password" required class="w-full mb-3 p-2 border rounded" />
+          <button type="submit" class="bg-blue-300 text-blue-900 text-sm px-3 py-2 rounded hover:bg-blue-400 transition">Zaloguj się</button>
+          <p id="login-error" class="text-red-600 mt-2 hidden"></p>
+        </form>
       </main>
     </div>
+    
     <script type="module" src="/login/main.js"></script>
   </body>
 </html>
