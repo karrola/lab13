@@ -20,7 +20,6 @@ form.addEventListener('submit', async (e) => {
     errorEl.textContent = error.message;
     errorEl.classList.remove('hidden');
   } else {
-    // np. przekierowanie po zalogowaniu
     window.location.href = '/lab13/index.html';
   }
 });
