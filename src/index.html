@@ -22,9 +22,9 @@
       <main class="pt-32 sm:pt-24 pb-8 px-4">
         <section id="articles" class="flex flex-wrap gap-4 justify-center items-start"></section>
 
-        <div id="modal" class="fixed inset-0 bg-black/50 flex justify-center items-center p-4 hidden z-50">
+        <div id="modal" role="dialog" aria-labelledby="modal-title" class="fixed inset-0 bg-black/50 flex justify-center items-center p-4 hidden z-50">
           <form id="add-article-form" class="bg-white p-6 rounded shadow w-full max-w-md max-h-full overflow-auto">
-            <h2 class="text-lg font-bold mb-4">Dodaj nowy artykuł:</h2>
+            <h2 class="text-lg font-bold mb-4" id="modal-title">Dodaj nowy artykuł:</h2>
             <label for="title" class="block mb-1">Tytuł:</label>
             <input type="text" name="title" id="title" required class="w-full mb-3 p-2 border rounded" />
             <label for="subtitle" class="block mb-1">Podtytuł:</label>
@@ -40,9 +40,9 @@
           </form>
         </div>
 
-        <div id="edit-modal" class="fixed inset-0 bg-black/50 flex justify-center items-center p-4 hidden z-50">
+        <div id="edit-modal" role="dialog" aria-labelledby="modal-title" class="fixed inset-0 bg-black/50 flex justify-center items-center p-4 hidden z-50">
           <form id="edit-form" class="bg-white p-6 rounded shadow w-full max-w-md max-h-full overflow-auto">
-            <h2 class="text-lg font-bold mb-4">Edytuj artykuł:</h2>
+            <h2 class="text-lg font-bold mb-4" id="modal-title">Edytuj artykuł:</h2>
             <input type="hidden" id="edit-article-id" />
             <label for="edit-title" class="block mb-1">Tytuł:</label>
             <input id="edit-title" type="text" required class="w-full mb-3 p-2 border rounded" />
